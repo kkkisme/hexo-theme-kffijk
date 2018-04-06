@@ -1,0 +1,18 @@
+<header>
+ <div class="content">
+  <div class="title"><%= config.author %> - <%= theme.description %></div>
+  <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+  </a>
+  <ul id="nav">
+    <% for(let i in theme.menu) {%>
+      <li class="<%- ((url_for(theme.menu[i].url) + 'index.html') === ('/' + path)) ? 'active' : '' %>">
+        <a href="<%- url_for(theme.menu[i].url) %>">
+          <i class="fa fa-<%= theme.menu[i].icon %>"></i><%= i %>
+        </a>
+    <%}%>
+  </ul>
+ </div>
+</header>

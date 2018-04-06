@@ -1,0 +1,25 @@
+<div class="archive-list">
+  <% if(index){ %>
+    <% page.posts.each(function(post){ %>
+      <%- partial('archive-post', {post: post})%>
+    <% }) %>
+  <% } else{ %>
+    <% let last; %>
+    <% page.posts.each(function(post, i){ %>
+      <% let year = post.date.year(); %>
+      <% if(last != year) {%>
+        <% if (last != null){ %>
+          </div></section>
+        <% } %>
+        <% last = year; %>
+          <section class="archive-wrapper">
+            <h2 class="archive-year"><%= year %></h2>
+            <div>
+      <%}%>
+      <%- partial('archive-post', {post: post}) %>
+    <% }) %>
+    <% if (page.posts.length){ %>
+      </div></section>
+    <% } %>
+  <% } %>
+</div>
