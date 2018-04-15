@@ -1,0 +1,9 @@
+<div class="recent-posts">
+	<h3>Recent-Posts:</h3>
+	<% if (site.posts.length === 0) { -%>
+		<div class="no-posts">No Post...</div>
+	<% } else { -%>
+		<%- list_posts({amount: 10}) %>
+	<% } -%>
+	
+</div>

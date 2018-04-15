@@ -1,8 +1,11 @@
 <div class="archive-list">
   <% if(index){ %>
-    <% page.posts.each(function(post){ %>
-      <%- partial('archive-post', {post: post})%>
-    <% }) %>
+    <h2 class="home-title">Welcome To My Blog</h2>
+    <div>
+      <% page.posts.each(function(post){ %>
+        <%- partial('archive-post', {post: post})%>
+      <% }) %>
+    </div>
   <% } else{ %>
     <% let last; %>
     <% page.posts.each(function(post, i){ %>

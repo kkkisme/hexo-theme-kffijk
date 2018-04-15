@@ -37,13 +37,25 @@ body
       @media screen and (max-width: 770px)
         display: none
       .recent-posts
-        height: 300px
+      .tags
+        min-height: 250px
+        padding: 20px
         box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 0 30px rgba(10,10,0,0.1) inset
         background: #f8f8fd
+      .tags
+        margin-top: 20px
+    .no-tags
+    .no-posts
+      font-size: 18px
+      color: #999
+      padding: 50px 0
+      text-align: center
     
 
 @import "_partial/header"
 @import "_partial/article"
 @import "_partial/archive-post"
 @import "_partial/archive"
+@import "_partial/tags"
+@import "_partial/recent-posts"
 @import "_partial/footer"

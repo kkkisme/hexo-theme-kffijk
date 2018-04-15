@@ -5,8 +5,8 @@
   <div class="container">
     <section class="main"><%- body %></section>
     <aside>
-      <div class="recent-posts"></div>
-      <div class="tags"></div>
+      <%- partial('_partial/recent-posts') %>
+      <%- partial('_partial/tags') %>
     </aside>
   </div>
   <%- partial('_partial/footer') %>
